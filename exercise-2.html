@@ -1,0 +1,107 @@
+<html>
+<head>
+<title>introduction to web</title>
+</head>
+<body>
+<U><h1 align="center">INTRODUCTION TO WEB TECHNOLOGY</h1></U>
+<img src="web3.jpg" style="width:100%"><BR><BR>
+<a href= #client>Client/Servers Concept</a><br><br>
+<a href= #components>Components of Web Application</a><br><br>
+<a href= #dynamic>Dynamic Web Pages</a><br><br>
+<a href= #http>HTTP</a><br><br>
+<a href= #web-security>Web-Security</a><br><BR>
+
+<a name="client"></a>
+<h2>Client/Server Concept</h2>
+<img src="clientserver.png" style="width:25%">
+<p> Client–server model is a distributed application structure that partitions tasks or workloads between the providers of a resource or service,
+ called servers, and service requesters, called clients.Often clients and servers communicate over a computer network on separate hardware, but both client and server may reside
+ in the same system. A server host runs one or more server programs, which share their resources with clients. A client does not share any of its resources, but it requests content
+ or service from a server. Clients, therefore, initiate communication sessions with servers, which await incoming requests. Examples of computer applications that use the 
+ client-server model are email, network printing, and the World Wide Web.</p>
+ <p>The client-server characteristic describes the relationship of cooperating programs in an application. 
+ The server component provides a function or service to one or many clients, which initiate requests for such services. Servers are classified by the services they provide.
+ For example, a web server serves web pages and a file server serves computer files. A shared resource may be any of the server computer's software and electronic components, 
+ from programs and data to processors and storage devices. The sharing of resources of a server constitutes a service.</p><p>The client-server model describes how a server provides 
+ resources and services to one or more clients. Examples of servers include web servers, mail servers, and file servers. Each of these servers provide resources to client devices, 
+ such as desktop computers, laptops, tablets, and smartphones. Most servers have a one-to-many relationship with clients, meaning a single server can provide resources to multiple 
+ clients at one time.</p>
+ <p>When a client requests a connection to a server, the server can either accept or reject the connection. If the connection is accepted, the server establishes and maintains a
+ connection with the client over a specific protocol. For example, an email client may request an SMTP connection to a mail server in order to send a message. The SMTP application 
+ on the mail server will then request authentication from the client, such as the email address and password. If these credentials match an account on the mail server, the server 
+ will send the email to the intended recipient.</p><br>
+
+<a name="components"></a>
+<h2>Components of Web Application</h2>
+<img src="compo.jpg" width="30%" hight="50%">
+<p>All web-based database applications have three primary components: A web browser (or client), a web application server, and a database server.
+Web-based database applications rely on a database server, which provides the data for the application. The database server sometimes also provides business logic in the form of stored procedures.
+Stored procedures can offer significant performance advantages, especially in a multi-tiered architecture.</p> 
+<p>The clients handle the presentation logic, which controls the way in which users interact with the application. In some cases, the client validates user-provided input. Web applications sometimes 
+integrate Java applets into the client-side logic to improve the presentation layer.</p>
+<b>Applet</b>
+<p>A Java program that is part of a Hypertext Markup Language (HTML) page. (HTML is the standard method for presenting web data to users.) Applets work with Java-enabled browsers, such as Microsoft Internet Explorer; they are loaded when the HTML page is processed.
+Web application servers manage the business logic. The business logic, typically written in Java, supports multitiered applications. The web application server can manage requests from a variety of remote clients. The web application layer might include JavaServer Pages (JSP) files, Java servlets, Enterprise JavaBeans (EJB) components, or web services.
+</p>
+<b>JSP</b>
+<p>A technology that provides a consistent way to extend web server functionality and create dynamic web content. The web applications that you develop with JSP technology are server and platform independent.</p>
+<b>Servlet</b>
+<p>A Java program that responds to client requests and generates responses dynamically</p><br>
+
+<a name="dynamic"></a>
+<h2>Dynamic Web Pages</h2>
+<img src="dynamic-webpage.png" width="40%" height="40%">
+<p>A Web page that provides custom content for the user based on the results of a search or some other request. Also known as "dynamic HTML" or "dynamic content," the dynamic term is used when referring to 
+ interactive Web pages created for each user in contrast to the billions of static Web pages that do not change.</p>
+<p>A server-side dynamic web page is a web page whose construction is controlled by an application server processing server-side scripts. In server-side scripting, parameters determine how the assembly 
+of every new web page proceeds, including the setting up of more client-side processing.</p>
+<p>A client-side dynamic web page processes the web page using HTML scripting running in the browser as it loads. JavaScript and other scripting languages determine the way the HTML in the received page is
+parsed into the Document Object Model, or DOM, that represents the loaded web page. The same client-side techniques can then dynamically update or change the DOM in the same way. Even though a web page can
+be dynamic on the client-side, it can still be hosted on a static hosting service such as GitHub Pages or Amazon S3 as long as there isn't any server-side code included.
+The Hypertext Transfer Protocol (HTTP) is designed to enable communications between clients and servers.</p>
+
+<br><a name="http"></a>
+<h2>HTTP (Hypertext transfer protocol)</h2>
+<img src="http.png" width="30%" height="30%">
+<p>HTTP (Hypertext Transfer Protocol) is the set of rules for transferring files, such as text, graphic images, sound, video, and other multimedia files, on the World Wide Web. As soon as a web user opens their web browser,
+  the user is indirectly making use of HTTP. HTTP is an application protocol that runs on top of the TCP/IP suite of protocols (the foundation protocols for the Internet). The latest version of HTTP is HTTP/2, which was published
+  in May 2015. It is an alternative to its predecessor, HTTP 1.1, but does not it make obsolete.</p>
+<p>HTTP works as a request-response protocol between a client and server.</p>
+<p>Example: A client (browser) sends an HTTP request to the server; then the server returns a response to the client. The response contains status information about the request and may also contain the requested content.
+</p>
+HTTP Methods are:
+<ul>
+<li>GET</li>
+<li>POST</li>
+<li>PUT</li>
+<li>HEAD</li>
+<li>DELETE</li>
+<li>PATCH</li>
+<li>OPTIONS</li>
+</ul>
+<br>
+
+<a name="web-security"></a>
+<h2>Web Security</h2>
+<img src="websesurity.jpg" width="30%" height="30%" >
+<p>
+Web security is also known as <b>“Cybersecurity”</b>. It basically means protecting a website or web application by detecting, preventing and responding to cyber threats.
+Websites and web applications are just as prone to security breaches as physical homes, stores, and government locations. Unfortunately, cybercrime happens every day, and great web security measures are needed to protect websites and web applications from becoming compromised.
+That’s exactly what web security does – it is a system of protection measures and protocols that can protect your website or web application from being hacked or entered by unauthorized personnel. This integral division of Information Security is vital to the protection of websites,
+web applications, and web services. Anything that is applied over the Internet should have some form of web security to protect it.
+</p>
+<p>
+    Cyber security is the practice of defending computers, servers, mobile devices, electronic systems, networks, and data from malicious attacks. It's also known as information technology security or electronic information security.
+ The term applies in a variety of contexts, from business to mobile computing, and can be divided into a few common categories.</p>
+ <ul>
+       <li><b>Network security</b> is the practice of securing a computer network from intruders, whether targeted attackers or opportunistic malware.
+</li>
+       <li><b>Application security</b>focuses on keeping software and devices free of threats. A compromised application could provide access to the data its designed to protect. Successful security begins in the design stage, well before a program or device is deployed.
+</li>
+       <li><b>Information security</b> protects the integrity and privacy of data, both in storage and in transit.
+</li> 
+       <li><b>Operational security</b>includes the processes and decisions for handling and protecting data assets. The permissions users have when accessing a network and the procedures that determine how and where data may be stored or shared all fall under this umbrella.
+</li> 
+</ul>
+</body>
+<html>
