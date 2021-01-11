@@ -1,0 +1,56 @@
+html,body {
+    margin: 0;
+    padding: 0;
+}
+
+a:visited {
+  color: white;
+}
+
+
+a:hover {
+  color: hotpink;
+}
+
+
+a:active {
+  color: blue;
+}
+
+
+.left {
+    background:#585858;
+    color: white;
+    width: 35%
+}
+
+.right {
+    background-color:#585858;
+    width: 65%;
+}
+
+#intro{
+    
+    color:#6B82EF;
+    background-color:#585858;
+    text-align: center;
+
+}
+
+iframe{
+    width: 100%;
+    margin: 0;
+    height:100%;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+    height:50vh;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
