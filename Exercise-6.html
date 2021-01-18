@@ -1,0 +1,399 @@
+<html>
+<head>
+<title>string_math_fuctions</title>
+<style>
+	table, tr, td, th
+	{
+		padding: 5px;
+	        text-align:left;
+        }
+</style>
+</head>
+<body bgcolor="sky blue">
+<script>
+
+function length() 
+{
+	var a= document.getElementById("n1").value;
+	var l = a.length;
+	document.getElementById("a1").innerHTML = l;
+}
+
+function indexof()
+{
+	var a= document.getElementById("n2").value;
+	var text= document.getElementById("n3").value;
+	var pos=a.indexOf(text);
+	document.getElementById("a2").innerHTML = pos;
+}
+
+function lastindexof()
+{
+	var a= document.getElementById("n4").value;
+	var text= document.getElementById("n5").value;
+	var pos=a.lastIndexOf(text);
+	document.getElementById("a3").innerHTML = pos;
+}
+
+function search()
+{
+	var a= document.getElementById("n6").value;
+	var text= document.getElementById("n7").value;
+	var pos=a.search(text);
+	document.getElementById("a4").innerHTML = pos;
+}
+
+function slice()
+{
+	var a= document.getElementById("n8").value;
+	var start= document.getElementById("n9").value;
+	var end= document.getElementById("n10").value;
+	var string=a.slice(start,end);
+	document.getElementById("a5").innerHTML = string;
+}
+
+function replace()
+{
+	var a= document.getElementById("n11").value;
+	var string= a.replace(document.getElementById("n12").value,document.getElementById("n13").value);
+	document.getElementById("a6").innerHTML = string;
+}
+
+function upper() 
+{
+	var a = document.getElementById("n14").value;
+	var string = a.toUpperCase();
+	document.getElementById("a7").innerHTML = string;
+}
+
+function lower() 
+{
+	var a = document.getElementById("n15").value;
+	var string = a.toLowerCase();
+	document.getElementById("a8").innerHTML = string;
+}
+ 
+
+function round() 
+{
+	var n = document.getElementById("m1").value;
+	var val = Math.round(n);
+	document.getElementById("x1").innerHTML = val;
+}    
+
+function pow() 
+{
+	var n = document.getElementById("m2").value;
+	var p = document.getElementById("m3").value;
+	var val=Math.pow(n,p);
+	document.getElementById("x2").innerHTML = val;
+}
+
+function sqrt() 
+{
+	var n = document.getElementById("m4").value;
+	var val = Math.sqrt(n);
+	document.getElementById("x3").innerHTML = val;
+}    
+
+function abs() 
+{
+	var n = document.getElementById("m5").value;
+	var val = Math.abs(n);
+	document.getElementById("x4").innerHTML = val;
+}     
+
+function ceil() 
+{
+	var n = document.getElementById("m6").value;
+	var val = Math.ceil(n);
+	document.getElementById("x5").innerHTML = val;
+} 
+
+function floor() 
+{
+	var n = document.getElementById("m7").value;
+	var val = Math.floor(n);
+	document.getElementById("x6").innerHTML = val;
+} 
+
+</script>
+
+<h2 align="center">MATH FUNCTIONS</h2>
+<table align="center">
+<tr>
+	<th>ENTER THE NUMBER TO ROUND</th>
+	<td><input id="m1"> </input></td>
+</tr>
+
+<tr>
+	<td></td>
+	<td><button onclick="round()">round</button></td>
+</tr>
+
+<tr>
+	<td></td>
+	<td>  
+		<p id="x1"></p>   
+	</td>
+</tr>       
+
+<tr>
+	<th>ENTER THE NUMBER</th>
+	<td><input id="m2"> </input></td>
+</tr>
+
+<tr>
+	<th>POWER</th>
+	<td><input id="m3"> </input></td>
+</tr>
+
+<tr>
+	<td></td>
+	<td><button onclick="pow()">pow</button></td>
+</tr>
+
+<tr>
+	<td></td>
+	<td>  
+		<p id="x2"></p>   
+	</td>
+</tr>  
+
+<tr>
+	<th>ENTER THE NUMBER</th>
+	<td><input id="m4"> </input></td>
+</tr>
+
+<tr>
+	<td></td>
+	<td><button onclick="sqrt()">sqrt</button></td>
+</tr>
+
+<tr>
+	<td></td>
+	<td>  
+		<p id="x3"></p>   
+	</td>
+</tr> 
+
+<tr>
+	<th>ENTER THE NUMBER</th>
+	<td><input id="m5"> </input></td>
+</tr>
+
+<tr>
+	<td></td>
+	<td><button onclick="abs()">absolute</button></td>
+</tr>
+
+<tr>
+	<td></td>
+	<td>  
+		<p id="x4"></p>   
+	</td>
+</tr> 
+
+<tr>
+	<th>ENTER THE NUMBER</th>
+	<td><input id="m6"> </input></td>
+</tr>
+
+<tr>
+	<td></td>
+	<td><button onclick="ceil()">ceil</button></td>
+</tr>
+
+<tr>
+	<td></td>
+	<td>  
+		<p id="x5"></p>   
+	</td>
+</tr> 
+
+<tr>
+	<th>ENTER THE NUMBER</th>
+	<td><input id="m7"> </input></td>
+</tr>
+
+<tr>
+	<td></td>
+	<td><button onclick="floor()">floor</button></td>
+</tr>
+
+<tr>
+	<td></td>
+	<td>  
+		<p id="x6"></p>   
+	</td>
+</tr> 
+</table>
+<br>
+<br>
+
+<h2 align="center">STRING FUNCTIONS</h2>
+<br>
+<table align="center">
+<tr>
+	<th>ENTER THE STRING</th>
+	<td><input id="n1"> </input></td>
+</tr>
+
+<tr>
+	<td></td>
+	<td><button onclick="length()">length</button></td>
+</tr>
+
+<tr>
+	<td></td>
+	<td>  
+		<p id="a1"></p>   
+	</td>
+</tr>       
+
+<tr>
+	<th>ENTER THE STRING</th>
+	<td><input id="n2"> </input></td>
+</tr>
+
+<tr>
+	<th>ENTER THE TEXT TO SEARCH</th>
+	<td><input id="n3"> </input></td>
+</tr>
+
+<tr>
+	<td></td>
+	<td><button onclick="indexof()">indexof</button></td>
+</tr>
+<tr>
+	<td></td>
+	<td>   
+		<p id="a2"></p>   
+	</td>
+</tr>
+
+<tr>
+	<th>ENTER THE STRING</th>
+	<td><input id="n4"> </input></td>
+</tr>
+<tr>
+	<th>ENTER THE TEXT TO SEARCH</th>
+	<td><input id="n5"> </input></td>
+</tr>
+
+<tr>
+	<td></td>
+	<td><button onclick="lastindexof()">lastindexof</button></td>
+<tr>
+	<td></td>
+	<td>   
+		<p id="a3"></p>   
+	</td>
+</tr>
+<tr>
+	<th>ENTER THE STRING</th>
+	<td><input id="n6"> </input></td>
+</tr>
+<tr>
+	<th>ENTER THE TEXT TO SEARCH</th>
+	<td><input id="n7"> </input></td>
+</tr>
+
+<tr>
+	<td></td>
+	<td><button onclick="search()">search</button></td>
+</tr>
+<tr>
+	<td></td>
+	<td>   
+		<p id="a4"></p>  
+	</td>
+</tr>
+
+<tr>
+	<th>ENTER THE STRING</th>
+	<td><input id="n8"> </input></td>
+</tr>
+
+<tr>
+	<th>START</th>
+	<td><input id="n9"> </input></td>
+</tr>
+<tr>
+	<th>END</th>
+	<td><input id="n10"> </input></td>
+</tr>
+
+<tr>
+	<td></td>
+	<td><button onclick="slice()">slice</button></td>
+</tr>
+<tr>
+	<td></td>
+	<td>   
+		<p id="a5"></p>
+	</td>
+</tr>
+
+<tr>
+	<th>ENTER THE STRING</th>
+	<td><input id="n11"> </input></td>
+</tr>
+
+<tr>
+	<th>ENTER THE WORD TO REPLACE</th>
+	<td><input id="n12"> </input></td>
+</tr>
+
+<tr>
+	<th>NEW WORD</th>
+	<td><input id="n13"> </input></td>
+</tr>
+
+<tr>
+	<td></td>
+	<td><button onclick="replace()">replace</button></td>
+</tr>
+<tr>
+	<td></td>
+	<td>   
+		<p id="a6"></p>
+	</td>
+</tr>
+
+<tr>
+	<th>ENTER THE STRING</th>
+	<td><input id="n14"> </input></td>
+</tr>
+
+<tr>
+	<td></td>
+	<td><button onclick="upper()">uppercase</button></td>
+</tr>
+
+<tr>
+	<td></td>
+	<td>   
+		<p id="a7"></p>
+	</td>
+</tr>
+
+<tr>
+	<th>ENTER THE STRING</th>
+	<td><input id="n15"> </input></td>
+</tr>
+
+<tr>
+	<td></td>
+	<td><button onclick="lower()">lowercase</button></td>
+</tr>
+
+<tr>
+	<td></td>
+	<td>   
+		<p id="a8"></p>
+	</td>
+</tr>
+</table>
+</body>
+</html>
