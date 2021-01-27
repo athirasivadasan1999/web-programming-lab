@@ -1,0 +1,89 @@
+<html>
+<head>
+    <title>Calender</title>
+<style>
+	html,body
+	{
+ 	    margin: 15;
+ 	    padding: 10;
+	}
+	table,th,td
+	{
+		border:1px solid black;
+		padding:8px;
+	}
+ 	#y,#m
+    	{
+        	padding:8px;
+        	width:10%;
+    	}
+   	button,input
+	{
+        	padding: 5px;
+	}	
+</style>	
+</head>
+<body bgcolor="powderblue">
+        <div align="center">
+                <input id="y" type="number" placeholder="year">
+                <select id="m">
+		      <option>month</option>                      
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                      <option>6</option>
+		      <option>7</option>
+		      <option>8</option>
+                      <option>9</option>
+		      <option>10</option>
+ 		      <option>11</option>
+		      <option>12</option> 		            
+		 </select>
+<br>
+<br>
+	<button onclick="generate()" style="background-color: red;color:white;">Generate Calender</button>
+	<button onclick="location.reload();" style="background-color: green;color:white;">Reset</button>
+</div>
+<br>
+<br>
+<br>
+	<div id="z1" align="center"> </div>
+</body>
+<script>
+    function generate()
+	{
+        var a = "<table border=1 id='calender'><tr><th>SUN</th><th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th>SAT</th></tr><tr>";
+        var y = document.getElementById("y").value;
+        var m = document.getElementById("m").value;
+        m -=1;
+        var date = new Date(y,m);
+        var day = date.getDay();
+        for (var i = 0; i < day; i++)
+	 {
+            a += "<td></td>";
+         }
+        while(date.getMonth() == m)
+	 {
+            a += "<td>" + date.getDate() + "</td>";
+            if(date.getDay() % 7 == 6)
+	    {
+                a+= "</tr><tr>";
+            }
+            date.setDate(date.getDate() + 1);
+         }
+        while(date.getDay() % 7 != 6 && date.getDay() % 7 != 0)
+	{
+            a+= "<td></td>";
+            date.setDate(date.getDate() + 1);
+        }
+        if(date.getDay() % 7 > 0)
+	{
+            a+= "<td></td></tr>";
+        }
+        a += "</table>"
+        document.getElementById("z1").innerHTML = a;
+      }
+</script>
+</html>
