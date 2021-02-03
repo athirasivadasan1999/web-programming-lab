@@ -1,0 +1,116 @@
+<html>
+<head>
+    <title>Form Validation</title>
+</head>
+<style>    
+    tr,td,th{
+        padding:18px;
+        text-align: left;
+    	}
+</style>
+<body>
+	<h2 align="center">FORM VALIDATION</h2>
+	<form name="form" action="" method="POST" onsubmit="return validation()">
+        <table align="center">
+		<tr>
+                	<th>Name</th>
+                	<td><input type="text" name="name" > </td>
+            	</tr>
+	    	<tr>
+                	<th>DOB</th>
+                	<td><input type="text" name="db" > </td>
+            	</tr>
+            	<tr>
+                	<th>Email ID </th>
+                	<td><input type="email" name="mail" required > </td>
+            	</tr>
+            	<tr>
+                	<th>Phone No</th>
+                	<td><input type="tel" name="ph"> </td>
+            	</tr>
+            	<tr>
+                	<th>Username </th>
+                	<td><input type="text" name="user"> </td>
+            	</tr>
+           	<tr>
+                	<th>Password </th>
+                	<td><input type="password" name="pswrd"> </td>
+		</tr>
+		<tr>
+			<th></th>
+                	<th text-align="center"><input type="submit" value="submit"></th>
+		</tr>
+	</table>
+	</form>
+
+<script>
+	function validation()
+	{
+		var name = document.form.name.value;
+		var db = document.form.db.value;
+		var ph = document.form.ph.value;
+		var user = document.form.user.value;
+		var pswrd = document.form.pswrd.value;
+		var pattern = /^([0-9]{2})-([0-9]{2})-([0-9]{4})$/;
+		var retype = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,20}$/;
+		var rename=/^[A-Za-z]+$/;
+
+
+		if (name == "")
+		{
+			alert("Name must be filled out ");
+			document.form.name.focus();
+			return false;
+		}
+
+		else if(!rename.test(name))
+		{
+			alert("Enter a Valid Name ");
+			document.form.name.focus();
+			return false;
+		}
+
+		if (db == null || db == "")
+		{
+			alert( "DOB must be filled out");
+			document.form.db.focus();
+			return false;
+		}
+
+		else if( !pattern.test(db))
+		{
+			alert( "Date of Birth should be in DD-MM-YYYY");
+        		document.form.db.focus();
+			return false;
+		}
+
+		if (ph == "" || (isNaN(ph)))
+		{
+			alert("enter a valid Mobile number");
+			return false;
+		}
+           
+		else if (ph.length != 10)
+		{
+			alert("Enter Mobile number with 10 digit");
+			return false;
+		}
+
+		if (user == "")
+		{
+			alert("Username must be filled out");
+			document.form.user.focus();
+			return false;
+		}
+
+		if (pswrd == "" || pswrd.length < 8 || !retype.test(pswrd))
+		{
+                	alert("Enter minimum 8 characters Password !!" + '\n' + "Atleast one Lowercase,uppercase,numeric & special charecter must be included");
+                	document.form.pswrd.focus();
+                	return false;
+		}
+	
+        }
+</script>
+</body>
+</html>
