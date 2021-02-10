@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>Image</title>
+</head>
+<body>
+	<h1 id="abc" align="center">A WORLD OF TECHNOLOGY</h1>
+
+	<img src="web-design.jpg" id="image" height="100%" width="100%"><br>
+            
+<script>
+
+	document.getElementById("image").addEventListener("mouseover",change1);
+	document.getElementById("image").addEventListener("mouseout",change2);
+	document.getElementById("abc").addEventListener("mouseover",heading1);
+	document.getElementById("abc").addEventListener("mouseout",heading2);
+    
+	function change1()
+	{
+        	document.getElementById("image").src = "robotic.jpg";
+	}
+	
+	function change2()
+	{
+        	document.getElementById("image").src = "iot1.jpg";
+	}
+	
+	function heading1()
+	{
+		document.getElementById('abc').innerHTML= "INTERNET OF THINGS";
+	}
+
+	function heading2()
+	{
+		document.getElementById('abc').innerHTML= "ROBOTIC PROCESS AUTOMATION";
+	}
+
+</script>
+</body>
+</html>
